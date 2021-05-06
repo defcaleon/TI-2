@@ -1,28 +1,12 @@
 public class PublicKey {
-    private int a;
-    private int p;
     private int y;
+    private int g;
+    private int p;
 
 
-    public PublicKey(int a, int p, int y) {
-        this.a = a;
-        this.p = p;
+    public PublicKey(int y, int g, int p) {
         this.y = y;
-    }
-
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public int getP() {
-        return p;
-    }
-
-    public void setP(int p) {
+        this.g = g;
         this.p = p;
     }
 
@@ -34,12 +18,28 @@ public class PublicKey {
         this.y = y;
     }
 
+    public int getG() {
+        return g;
+    }
+
+    public void setG(int g) {
+        this.g = g;
+    }
+
+    public int getP() {
+        return p;
+    }
+
+    public void setP(int p) {
+        this.p = p;
+    }
+
     @Override
     public String toString() {
         return "PublicKey{" +
-                "a=" + a +
+                "y=" + y +
+                ", g=" + g +
                 ", p=" + p +
-                ", y=" + y +
                 '}';
     }
 }
